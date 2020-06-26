@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="./play.ico" />
+	    <title>Fortool x Toblox</title>
+	</head>
+	<body>
+		<img src="./start.webp"/>
+		<div><h1>Vous allez être redirigé vers Discord</h1><h2 id='counter'>5</h2></div>
+	</body>
+</html>
+
+<style type="text/css">
+	body, html {
+		height: 100vh;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #262626;
+	}
+	img {
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		z-index: 0;
+	}
+	div {
+		position: fixed;
+		bottom: 8vh;
+		left: 10vw;
+		right: 10vw;
+		padding-left: 2vh;
+		padding-right: 2vh;
+		background-color: rgba(255, 255, 255, 0.774);
+		border: none;
+		outline: none;
+		border-radius: 100vh;
+	}
+	h1 {
+		margin-top: 3vh;
+		font-size: 2vh;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		color: #262626;
+	}
+	h2 {
+		font-size: 3vh;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		color: #262626;
+	}
+</style>
+
+<script type="text/javascript">
+    window.onload = function() {
+		FluffyKittenMaker(0);
+		Conflaburator(0);
+		Redirection();
+    }
+    function FluffyKittenMaker(SomeNumberThing) {
+        document.body.style.opacity = SomeNumberThing/100;
+    }
+    function Conflaburator(SomeNumberThing) {
+        if (SomeNumberThing <= 100) {
+            FluffyKittenMaker(SomeNumberThing);
+            SomeNumberThing += 1;
+            window.setTimeout("Conflaburator("+SomeNumberThing+")", 10);
+        }
+    }
+	function Redirection() {
+		n = 0
+		var text = document.getElementById('counter');
+		setInterval(() => {
+			n++
+			if (n>4) document.location.href="https://discord.gg/eg8DWzh";
+			counter.textContent = (5-n);
+		}, 1000)
+	}
+</script>

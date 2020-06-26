@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./favicon.ico" />
+        <title>Pub Unvailable</title>
+    </head>
+    <body>
+        <img src="./no_pub.png"/>
+    </body>
+</html>
+
+<style type="text/css">
+    body, html {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #262626;
+    }
+    img {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+</style>
+
+<script type="text/javascript">
+    window.onload = function() {
+        MakeFluffHappen()
+    }
+    function MakeFluffHappen() {
+        FluffyKittenMaker(0);
+        Conflaburator(0);
+    }
+    function FluffyKittenMaker(SomeNumberThing) {
+        document.body.style.opacity = SomeNumberThing/100;
+    }
+    function Conflaburator(SomeNumberThing) {
+        if (SomeNumberThing <= 100) {
+            FluffyKittenMaker(SomeNumberThing);
+            SomeNumberThing += 1;
+            window.setTimeout("Conflaburator("+SomeNumberThing+")", 10);
+        }
+    }
+</script>

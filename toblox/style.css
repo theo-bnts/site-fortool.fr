@@ -1,0 +1,100 @@
+body, html {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #262626;
+}
+
+body {
+    -webkit-animation: fadein 1s;
+}
+
+@-webkit-keyframes fadein {
+    from { 
+        opacity: 0;
+        background-color: black;
+    }
+    to   {
+        opacity: 1; 
+        background-color: #262626;
+    }
+}
+
+.imageb {
+    margin: 0;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.play {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 10%;
+}
+.button {
+    z-index: 999997;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: transparent;
+}
+.cookiesAlert {
+    position: fixed;
+    bottom: 1vh;
+    left: 10vw;
+    right: 10vw;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    background-color: rgba(255, 255, 255, 0.774);
+    border: none;
+    outline: none;
+    border-radius: 1vw;
+}
+
+.playerPub {
+    position: fixed;
+    bottom: 1vh;
+    left: 10vw;
+    right: 10vw;
+}
+
+.counter {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: absolute;
+    right: -4vh;
+    top : 50vh;
+    transform: translate(-50%, -50%);
+}
+h1{
+    font-size: 6vw;
+    margin-bottom: 1vw;
+}
+
+h2, h3{
+    font-size: 1.3vw;
+    margin-top: -1vw;
+}
+h4 {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+@media (max-device-width: 800px){
+    h2, h3{
+        font-size: 12px;
+    }
+}
