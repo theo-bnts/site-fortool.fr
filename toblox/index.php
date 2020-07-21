@@ -34,7 +34,7 @@
     }
 
     try {
-        $database = new PDO('mysql: host=localhost; dbname=tipeeestream; charset=utf8', 'admin', 'Rz1vBcXa9SBl', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $database = new PDO('mysql: host=localhost; dbname=database-name; charset=utf8', 'user', 'password', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
     } catch(Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }
